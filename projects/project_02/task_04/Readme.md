@@ -10,4 +10,4 @@ Set up notification so that you get an email alert when the alarm is triggered.
 Save a screenshot of the CloudWatch Alarms page showing the new alarm with a green OK status as CloudWatch_alarm.png or CloudWatch_alarm.jpg
 
 # Note
-My billing alarm is already in alarm state because i was making other exeperiments with AWS
+My billing alarm is already in alarm state because I was making other exeperiments with AWS
