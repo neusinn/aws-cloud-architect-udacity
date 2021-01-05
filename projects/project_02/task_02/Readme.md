@@ -73,4 +73,4 @@ Total montly cost: 6031 USD
     - increased storage to 2 TB
 Operating system (Linux), Quantity (8), Pricing strategy (On-Demand Instances 1 Year No Upfront), Storage for each EC2 instance (Provisioned IOPS SSD (io1)), Storage amount (2 TB), Provisioning IOPS (1000), Instance type (t3.xlarge)
 
-
+Increased Cost Estimate: https://calculator.aws/#/estimate?id=068adcad9a0c3fcc4f5c53208ef68044a07c15b9
