@@ -7,7 +7,7 @@
         region = var.aws_region
     }
 
-# IAM
+# IAM role which dictates what other AWS services the Lambda function may access.
 resource "aws_iam_role" "iam_for_lambda" {
     name = "iam_for_lambda"
 

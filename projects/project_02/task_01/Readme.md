@@ -30,3 +30,10 @@ You have been asked to plan a SERVERLESS architecture schematic for a new applic
 - API Gateway
 - DynamoDB
 - S3 Storage
+
+
+# Suggestions to Make Your Project Stand Out!
+Enhance the original infrastructure to demonstrate a solution suitable for >> 1 million concurrent users: Include multiple regions, Decoupling, CloudFront Distributions, Load Balancing, Auto-Scaling, Route 53 Optimization, Serverless Functions, etc
+Demonstrate an understanding of decoupling by using AWS Lambda, SQS, and SNS in the infrastructure Diagram
+Use Terraform to provision the following infrastructure in two regions: A VPC, Public subnets, EC2 instance with 20 GB EBS storage, S3 buckets in both regions. Create vars.tf, outputs.tf, main.tf. Save the terraform files in folders as modules. Upload the modules to GitHub
+Configure additional CloudWatch alarms to send alerts for CPU usage, memory usage or other metrics.to a valid email address. Alarms related to infrastructure would be particularly impressive
