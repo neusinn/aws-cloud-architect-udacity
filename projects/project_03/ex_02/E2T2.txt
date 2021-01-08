@@ -1,0 +1,19 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+Inspector Findings:
+A)  Unrestricted traffic to WebApp instance
+--> restrict protocol and ports
+--> 
+
+B) Security Hub
+WebAppSG        CIS.4.2 Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389
+WebAppSG        CIS.4.1 Ensure no security groups allow ingress from 0.0.0.0/0 to port 22
+AttackInstanceSG CIS.4.1 Ensure no security groups allow ingress from 0.0.0.0/0 to port 22
+S3              S3.4	S3 buckets should have server-side encryption enabled
+EC2             SSM.1	EC2 instances should be managed by AWS Systems Manager
+
+C) AWS Config Dashboard
+S3 bucktes Server-Side_encryption is not enabled
+--> enable Server-Side_encryption
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
