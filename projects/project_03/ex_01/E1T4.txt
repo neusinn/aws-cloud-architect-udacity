@@ -1,0 +1,13 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+In the Network ACL rules of the VPC all inbound traffic is allow. No rules to restrict traffic type, protocol or ports are apllied.
+
+# Poor practice 2
+The Webservice Instance is in the public subnet but should not reside in the public subnet.
+The Webservice Instance allow all traffic but should restrict traffic to the needed protocol and ports. The as port 443 should be used instead of 80 to secure path from Loadbalancer to WebApp instance.
+WebAppSG allow all traffic but should restrict traffic to the needed protocol and ports.
+
+# Poor practice 3
+S3 buckets should block public access.
+S3 buckets should enable ServerSide encryption.
