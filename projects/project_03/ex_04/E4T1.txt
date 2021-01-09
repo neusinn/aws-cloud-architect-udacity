@@ -1,0 +1,15 @@
+
+
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+Goal is to prevent reaching the WebApp instances ssh port 20 from internet.
+- avoid password login on ssh
+- restrict sources which are allowed to target WebApp instance
+Actions:
+1. WebAppSG --> restrict inbound rules 
+   WebAppSG --> deney port 22 (ssh); Use System Manager Session Manager instead
+2. Web Service Instance - C3 --> move to private network
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+- Restrict policy to least priviledge access
+
+

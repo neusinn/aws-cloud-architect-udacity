@@ -1,0 +1,18 @@
+
+# What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+1. Instance i-066cdf503ec1d70ca (Web Service Instance - C3) is configured to allow users to log in with root credentials over SSH, without having to use a command authenticated by a public key. This increases the likelihood of a successful brute-force attack.
+--> SSH access to the web instance should be disabled
+
+2. On this instance, TCP port 5000 is reachable from the internet with a process listening on the port. The process has name ‘python3’, process id 1877, and uses binary /usr/bin/python3.6 (deleted). The instance i-066cdf503ec1d70ca is located in VPC vpc-018448402466f7b54 and has an attached ENI eni-0e9a0b83249b1d6f4 which uses network ACL acl-0525f30cafdb456fd. The port is reachable from the internet through Security Group sg-0a4ddf1ae7b795a57 and IGW igw-04458fe008983c484
+--> Port 5000 should only be accessable from the loadbalancer
+
+
+# Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+
+No. As long the IAM permission is insecure, creating VPC private endpoints for S3 will not prevent the unauthorized access to the S3 bucket.
+
+# Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+No. Enabling Server-Side Encription will only encrypt new uploading objects. In order to encrypt the old object, one has to download first and re-upload them.
+
+# What would happen if the original cloud formation templates are applied to this environment.
+The resources will build according to the original templats. This means a rollback to the old, insecure configuration.

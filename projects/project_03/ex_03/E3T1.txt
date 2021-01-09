@@ -1,3 +1,20 @@
-# Describe GuardDuty findings that were detected related to the brute force attack
+# Describe GuardDuty findings that were detected related to the brute force attack (See doc)[ https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-ec2.html#unauthorizedaccess-ec2-sshbruteforce]
+UnauthorizedAccess:EC2/SSHBruteForce
+- Instance Attack Instance - C3 is the ACTOR from Port 50026
+  This instance is performing SSH brute force attacks against 10.192.XXX.XXX. Brute force attacks are used to gain unauthorized access to your instance by guessing the SSH password.
+- Instance Web Service Instance - C3 is the TARGET: to Port 22 (SSH)
 
-# Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+# Research the (AWS Guard Duty documentation page)[https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html] and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+
+Amazon GuardDuty is a continuous security monitoring service that analyzes and processes the following Data sources: 
+- AWS CloudTrail Event Logs
+- AWS CloudTrail Management Events
+- AWS CloudTrail S3 Data Events
+- VPC Flow Logs
+- DNS logs
+
+By analyzing the VPC Flow Logs GuardDuty can dedect Brute Force attacks to EC2 instances.
+The VPC Flow Logs contains information about all traffic in an out of ec2 Network Interfaces
+
+
+ 
