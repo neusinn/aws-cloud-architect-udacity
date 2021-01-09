@@ -1,0 +1,37 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+
+For Terraform
+- PaloAlto PrismaScan
+- Terrascan
+- Regula
+
+For AWS Cloud Formation
+- CFRipper
+- Regula
+- PaloAlto PrismaScan
+
+### Example vulnerability for Tool Regula https://github.com/fugue/regula
+- S3 Buckets open to public
+- S3 Buckets without Server-Side-Encription enabled
+- Securtiy Groups policies to permitting ingress from all sources
+- Open SSH ports
+
+### Example vulnerability for Tool Terrascan https://docs.accurics.com/projects/accurics-terrascan/en/latest/
+- S3 Buckets without Server-Side-Encription enabled
+- S3 bucket Access is allowed to all AWS Account Users
+
+
+##Scan AMI’s or containers for OS vulnerabilities
+- Anchore https://anchore.com/
+- Trivy https://github.com/aquasecurity/trivy
+
+### Example vulnerability
+- Unpatched OS vulnerabilities
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+ - AWS Config
+
+### Example vulnerability
+- Password policy not met
